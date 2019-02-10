@@ -1,5 +1,6 @@
 """ISO-8601 formatted date and time string."""
 directive @unique on FIELD_DEFINITION
+scalar DateTime
 
 
 """A monetary transaction tied to an account."""

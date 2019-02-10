@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "cors": false,
+  "tracing": "disabled",
+  "playground": false
+}
