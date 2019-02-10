@@ -4,7 +4,9 @@
   "description": "Cashflow and budgeting application",
   "main": "index.js",
   "scripts": {
-    "start": "node src/api/index.js",
+    "start": "echo 'Not implemented yet. Use `npm run api`.'",
+    "api": "NODE_ENV=development node src/api/index.js",
+    "spa": "echo 'Not implemented yet'",
     "setup": "./aux/setup.sh",
     "prisma:deploy": "cd src/prisma && prisma deploy",
     "prisma:generate": "cd src/prisma && prisma generate",
