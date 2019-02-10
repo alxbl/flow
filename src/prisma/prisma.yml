@@ -1,0 +1,6 @@
+endpoint: http://127.0.0.1:4466
+datamodel: ../model.graphql
+
+generate:
+  - generator: javascript-client
+    output: ./js

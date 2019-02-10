@@ -1,6 +1,3 @@
-"""ISO-8601 formatted date and time string."""
-scalar DateTime
-
 type Query {
 
   """API Endpoint Description."""
@@ -19,30 +16,3 @@ type Mutation {
   associate(tx: ID!, label: ID!): Boolean!
 }
 
-"""A monetary transaction tied to an account."""
-type Transaction {
-  id: ID!
-  user: User!
-  amount: Int!
-  description: String
-  date: DateTime!
-  labels: [Label!]!
-}
-
-
-"""A user account."""
-type User {
-  id: ID!
-  name: String!
-  joined: DateTime!
-}
-
-"""A label associated with transactions."""
-type Label {
-  id: ID!
-  user: User!
-  transactions: [Transaction!]!
-  name: String!
-  color: String!
-  created: DateTime!
-}

@@ -1,0 +1,33 @@
+"""ISO-8601 formatted date and time string."""
+directive @unique on FIELD_DEFINITION
+
+
+"""A monetary transaction tied to an account."""
+type Transaction {
+  id: ID! @unique
+  user: User!
+  amount: Int!
+  description: String
+  date: DateTime!
+  labels: [Label!]!
+}
+
+
+"""A user account."""
+type User {
+  id: ID! @unique
+  name: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A label associated with transactions."""
+type Label {
+  id: ID! @unique
+  user: User!
+  transactions: [Transaction!]!
+  name: String!
+  color: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
